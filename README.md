@@ -66,19 +66,36 @@ astra/
 └── tests/
 ```
 
+## Providers
+
+Supports 4 LLM providers:
+- **bedrock** - AWS Bedrock (default)
+- **openai** - OpenAI API
+- **ollama** - Local Ollama
+- **vllm** - Local VLLM
+
 ## Environment Variables
 
 ```bash
+# AWS Bedrock (default)
+AWS_ACCESS_KEY_ID=xxx
+AWS_SECRET_ACCESS_KEY=xxx
+AWS_REGION=us-east-1
+BEDROCK_MODEL_ID=anthropic.claude-3-sonnet-20240229-v1:0
+
 # OpenAI
 OPENAI_API_KEY=sk-xxx
 
-# Or generic
+# Local - Ollama
+OLLAMA_HOST=http://localhost:11434/v1
+
+# Local - VLLM
+VLLM_HOST=http://localhost:8000/v1
+
+# Generic (works with any provider)
 LLM_API_KEY=your-key
 LLM_BASE_URL=https://api.openai.com/v1
 LLM_MODEL_ID=gpt-4
-
-# Local models
-OLLAMA_HOST=http://localhost:11434/v1
 
 # Search tools
 TAVILY_API_KEY=tvly-xxx
