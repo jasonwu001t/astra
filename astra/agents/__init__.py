@@ -1,4 +1,14 @@
-from astra.agents.base import Agent
+"""Agent implementations module"""
 
-__all__ = ["Agent"]
+from .simple_agent import SimpleAgent
+from .react_agent import ReActAgent
+from .reflection_agent import ReflectionAgent
+from .plan_solve_agent import PlanAndSolveAgent
+
+__all__ = [
+    "SimpleAgent",
+    "ReActAgent",
+    "ReflectionAgent",
+    "PlanAndSolveAgent"
+]
 
